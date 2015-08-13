@@ -1,6 +1,7 @@
 ---
 title: Solr manuell einrichten
 layout: default
+group: navigation
 ---
 
 # Solr für OPUS 4 manuell einrichten
@@ -17,7 +18,7 @@ solr-4.10.4.tgz
 
 {% highlight bash %}
 tar xvfz solr-4.10.4.tgz
-{% end highlight %}
+{% endhighlight %}
 
 
 ## Konfigurationsdateien holen
