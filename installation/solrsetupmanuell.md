@@ -12,7 +12,9 @@ Ubuntu 14.0.4 verwendet. Die Schritte sollten f√ºr andere Linux Distributionen √
 
 ## Solr 4.9.1 herunterladen
 
+{% highlight bash %}
 solr-4.10.4.tgz
+{% endhighlight %}
 
  Auspacken
 
@@ -80,6 +82,18 @@ In der Datei `solr.xml` den Core wie folgt eintragen.
 ...
 <core name="opus" instanceDir="opus" configSet="opus4" />
 ...
+{% endhighlight %}
+
+Die Verzeichnissstruktur innerhalb von `multicore` ist dann wie folgt:
+
+{% highlight bash %}
+multicore/
+|-solr.xml
+|-configsets/
+  |-opus4/
+    |- conf/
+       |- schema.xml
+       |- solrconfig.xml
 {% endhighlight %}
 
 ## solrconfig.xml anpassen
