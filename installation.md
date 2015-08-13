@@ -1,6 +1,5 @@
 ---
 title: Installation
-layout: default
 group: navigation
 ---
 

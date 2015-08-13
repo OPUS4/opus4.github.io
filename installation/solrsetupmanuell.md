@@ -1,6 +1,5 @@
 ---
 title: Solr manuell einrichten
-layout: default
 group: navigation
 ---
 

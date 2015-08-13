@@ -1,6 +1,5 @@
 ---
 title: Einführung
-layout: default
 group: navigation
 ---
 
