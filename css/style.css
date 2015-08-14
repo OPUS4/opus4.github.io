@@ -1,14 +1,13 @@
 body {
     background: white;
-    margin: 1em;
-    max-width: 960px;
-    margin: 0 auto;
+    margin: 0em;
     font-family: sans-serif;
 }
 
 #header {
-    clear: both;
     border-bottom: 2px solid #26517c;
+    padding-left: 0.5em;
+    padding-right: 1em;
 }
 
 #header .logo {
@@ -22,39 +21,72 @@ body {
     padding-bottom: 10px;
 }
 
+.container {
+    margin: 0px;
+    padding: 0px;
+    display: table;
+    min-height: 20em;
+    width: 100%;
+}
+
 #navigation {
-    clear: both;
-    padding: 0.3em 0.5em;
-    border-bottom: 1px solid #26517c;
+    display: table-cell;
+    color: white;
+    background-color: #6677aa;
+    width: 20%;
+    min-width: 12em;
+    padding: 1em 1em;
+    vertical-align: top;
+}
+
+#navigation .title {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+
+#navigation a {
+    color: white;
+    text-decoration: none;
 }
 
 #navigation ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 #navigation ul li {
-    display: inline;
-    padding-right: 1em;
+    /* display: block;
+    width: 12em; */
+    padding: 0.2em 0em;
 }
 
 #navigation ul li.active {
     font-weight: bold;
+    padding-left: 0.5em;
 }
 
 #content {
-    clear: both;
+    display: table-cell;
+    padding: 1em;
+    width: 100%;
+    vertical-align: top;
 }
 
 #footer {
     border-top: 2px solid #26517c;
-    margin-top: 0.5em;
     padding-top: 0.5em;
     clear: both;
 }
 
 #footer a {
+    padding-right: 1em;
+}
+
+#footer .wrapper {
+    padding-left: 1em;
     padding-right: 1em;
 }
 

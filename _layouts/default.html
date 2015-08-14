@@ -13,18 +13,20 @@
 
 {% include header.html %}
 
-<div id="navigation">
-    <ul>
-    {% assign group = "navigation" %}
-    {% include pagelist.html group="navigation" %}
-        <li style="float: right; padding-right: 0;"><a href="{{site.baseurl}}/about/index.html">Styling</a></li>
-    </ul>
-</div>
+<div class="container">
 
-<div id="content">
+    <div id="navigation">
+        <div class="title">Seiten</div>
+        <ul>
+        {% include pagelist.html group="navigation" %}
+        </ul>
+    </div>
 
-{{ content }}
+    <div id="content">
 
+    {{ content }}
+
+    </div>
 
 </div>
 
