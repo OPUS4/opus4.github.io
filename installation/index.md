@@ -1,6 +1,7 @@
 ---
 title: Installation
 group: navigation
+weight: 40
 ---
 
 # Installation

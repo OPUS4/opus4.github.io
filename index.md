@@ -1,6 +1,7 @@
 ---
 title: Einführung
 group: navigation
+weight: 0
 ---
 
 * [OPUS 4 Homepage](http://opus4.kobv.de)

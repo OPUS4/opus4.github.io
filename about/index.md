@@ -1,6 +1,6 @@
 ---
-title: Styling Guide
-layout: default
+title: Über
+weight: 99
 ---
 
 <p class="info">

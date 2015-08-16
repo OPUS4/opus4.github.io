@@ -1,7 +1,7 @@
 body {
     background: white;
     margin: 0em;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #header {
@@ -25,7 +25,7 @@ body {
     margin: 0px;
     padding: 0px;
     display: table;
-    min-height: 20em;
+    min-height: 70%;
     width: 100%;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 #navigation a {
-    color: white;
+    color: #f0f0f0;
     text-decoration: none;
 }
 
@@ -61,18 +61,34 @@ body {
     /* display: block;
     width: 12em; */
     padding: 0.2em 0em;
+    color: gray;
 }
 
-#navigation ul li.active {
+#navigation ul li.active a {
+    color: white;
     font-weight: bold;
-    padding-left: 0.5em;
 }
 
+#navigation ul li.level1 {
+    font-size: 1.2em;
+}
+
+#navigation ul li.level2 {
+    padding-left: 2em;
+    font-size: 0.9em;
+}
+   
 #content {
     display: table-cell;
     padding: 1em;
     width: 100%;
     vertical-align: top;
+    font-size: 1.1em;
+    line-height: 180%;
+}
+
+#content h1 {
+    font-weight: normal;
 }
 
 #footer {
@@ -99,12 +115,19 @@ body {
 }
 
 .highlight {
-    /* margin: 0.5em; */
-    padding: 0em 1em;
-    font-family: monospace;
-    background: #EEEEEE;
-    display: block;
-    border: 1px dashed gray;
+    margin: 0em 1.5em;
+    padding: 0.5em 0.5em;
+    /* background: #EEEEEE; */
+    border-top: 1px dashed gray;
+    border-bottom: 1px dashed gray;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.2em;
+    line-height: 150%;
+}
+
+.highlight pre {
+    margin: 0px;
+    padding: 0px;
 }
 
 p.info {
