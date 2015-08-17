@@ -6,12 +6,15 @@ body {
 
 #header {
     border-bottom: 2px solid #26517c;
-    padding-left: 0.5em;
+    padding-left: 0em;
     padding-right: 1em;
 }
 
 #header .logo {
+    width: 20%;
+    min-width: 12em;
     display: inline-block;
+    text-align: center;
 }
 
 #header .title {
@@ -19,6 +22,7 @@ body {
     display: inline-block;
     vertical-align: bottom;
     padding-bottom: 10px;
+    padding-left: 0.5em;
 }
 
 .container {
@@ -77,7 +81,7 @@ body {
     padding-left: 2em;
     font-size: 0.9em;
 }
-   
+
 #content {
     display: table-cell;
     padding: 1em;
@@ -88,6 +92,18 @@ body {
 }
 
 #content h1 {
+    font-weight: normal;
+}
+
+#content h2 {
+    font-weight: normal;
+}
+
+#content h3 {
+    font-weight: normal;
+}
+
+#content h4 {
     font-weight: normal;
 }
 
@@ -120,14 +136,27 @@ body {
     /* background: #EEEEEE; */
     border-top: 1px dashed gray;
     border-bottom: 1px dashed gray;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 150%;
 }
 
 .highlight pre {
     margin: 0px;
     padding: 0px;
+}
+
+/* Inline code */
+code {
+    background: #f0f0f0;
+    font-family: 'Source Code Pro', monospace;
+    padding: 0em 0.5em;
+}
+
+/* Code blocks */
+.highlight code {
+    color: black;
+    background-color: white;
+    padding: 0em;
 }
 
 p.info {
