@@ -12,9 +12,9 @@
     {% assign filename = nodeUrlParts | last %}
     {% if currentLevel == nodeLevel and filename != 'index.html' %}
       {% if page.url == node.url %}
-        <li class="level2 active"><a href='{{node.url}}'>{{node.title}}</a></li>
+        <li class="level2 active"><a href='{{site.baseurl}}{{node.url}}'>{{node.title}}</a></li>
       {% else %}
-        <li class="level2"><a href='{{node.url}}'>{{node.title}}</a></li>
+        <li class="level2"><a href='{{site.baseurl}}{{node.url}}'>{{node.title}}</a></li>
       {% endif %}
     {% endif %}
   {% endif %}
