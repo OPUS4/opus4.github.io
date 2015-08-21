@@ -1,7 +1,7 @@
 body {
     background: white;
     margin: 0em;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans Pro', sans-serif;
 }
 
 #header {
@@ -91,6 +91,10 @@ body {
     line-height: 180%;
 }
 
+#content-wrapper {
+    max-width: 40em;
+}
+
 #content h1 {
     font-weight: normal;
 }
@@ -136,7 +140,6 @@ body {
     /* background: #EEEEEE; */
     border-top: 1px dashed gray;
     border-bottom: 1px dashed gray;
-    font-size: 1.1em;
     line-height: 150%;
 }
 
