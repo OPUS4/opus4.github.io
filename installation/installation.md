@@ -15,6 +15,19 @@ Um mit Git eine neue OPUS 4 Instanz einzurichten muss zuerst eine lokale Kopie a
 $ git clone https://github.com/opus4/application opus4
 {% endhighlight %}
 
+## Composer installieren
+
+Für die weitere Installation wird [Composer](https://getcomposer.org) benötigt. Falls Composer bereits installiert sein
+sollte kann dieser Schritt übersprungen werden. Andernfalls kann folgendes Skript verwendet werden.
+
+**TODO** still changing
+
+{% highlight bash %}
+$ ./install-composer.sh
+{% endhighlight %}
+
+Das Skript installiert `composer.phar` in das `opus4`-Verzeichnis.
+
 ## Abhängigkeiten installieren
 
 Die Abhängigkeiten werden mit Composer installiert. Dazu muss man in das Verzeichnis wechseln und `composer install`
