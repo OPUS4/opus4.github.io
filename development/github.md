@@ -9,6 +9,8 @@ Die Entwicklung von OPUS 4 erfolgt auf GitHub. Dort ist der Sourcecode in mehere
 
  <https://github.com/opus4>
 
+ <https://guides.github.com/introduction/flow/>
+
 ## Repositorien
 
 application     | <https://github.com/opus4/application>
