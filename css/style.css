@@ -189,3 +189,7 @@ p.warning {
     border-radius: 0.5em;
 }
 
+#content img {
+    margin: 1em;
+    padding: 1em;
+}
