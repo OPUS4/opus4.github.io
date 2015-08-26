@@ -1,5 +1,5 @@
 ---
-title: Einführung
+title: Home
 group: navigation
 weight: 0
 ---
