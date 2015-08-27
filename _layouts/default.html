@@ -5,25 +5,29 @@
     <meta http-equiv="Content-Language" content="de" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/syntax.css" />
     <link rel="shortcut icon" href="{{site.baseurl}}/img/favicon.ico" />
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css' />
 </head>
 
 <body>
 
 {% include header.html %}
 
-<div id="navigation">
-    <ul>
-    {% assign group = "navigation" %}
-    {% include pagelist.html group="navigation" %}
-        <li style="float: right; padding-right: 0;"><a href="{{site.baseurl}}/about/index.html">Styling</a></li>
-    </ul>
-</div>
+<div class="container">
 
-<div id="content">
+    <div id="navigation">
+        <ul>
+        {% include navigation.html %}
+        </ul>
+    </div>
 
-{{ content }}
-
+    <div id="content">
+        <div id="content-wrapper">
+    {{ content }}
+        </div>
+    </div>
 
 </div>
 

@@ -8,4 +8,12 @@ author_email: schwidder@zib.de
 
 url: https://opus4.github.io
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
 
