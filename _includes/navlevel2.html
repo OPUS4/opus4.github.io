@@ -1,4 +1,4 @@
-{% assign pages = site.pages | sort: "title"  %}
+{% assign pages = site.pages | sort: "weight"  %}
 
 {% assign currentUrlParts = page.url | split: '/' %}
 {% assign currentLevel = currentUrlParts | size %}
