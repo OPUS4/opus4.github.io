@@ -1,5 +1,6 @@
 ---
 title: OPUS 4.5
+weight: 20
 ---
 
 # Was ist neu in OPUS 4.5
