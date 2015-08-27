@@ -1,6 +1,5 @@
 ---
-title: Über
-weight: 99
+title: Dokumentation
 ---
 
 <p class="info">
