@@ -1,5 +1,6 @@
 ---
 title: Mit Git
+weight: 10
 ---
 
 # Installation mit Git

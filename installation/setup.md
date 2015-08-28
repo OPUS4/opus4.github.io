@@ -1,5 +1,6 @@
 ---
 title: Setup
+weight: 30
 ---
 
 Das Setup Skript führt die notwendigen Schritt aus, um eine OPUS 4 Instanz einzurichten.

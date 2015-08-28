@@ -1,5 +1,6 @@
 ---
 title: GitHub
+weight: 10
 ---
 
 # OPUS 4 auf GitHub

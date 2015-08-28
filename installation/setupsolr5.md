@@ -1,5 +1,6 @@
 ---
 title: Solr 5.2.1
+weight: 110
 ---
 
 # Apache Solr 5.2.1 konfigurieren

@@ -1,5 +1,6 @@
 ---
 title: Framework
+weight: 70
 ---
 
 # Framework Entwicklung
