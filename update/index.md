@@ -3,7 +3,13 @@ title: Update
 weight: 70
 ---
 
-Mit dem Umstieg auf Git und Composer ändert sich das Updateverfahren.
+# Updates
+
+<p class="info">
+Die Anleitung zum Update auf 4.5 wird bis zum Release noch weiter überarbeitet.
+</p>
+
+Mit dem Umstieg auf Git und Composer hat sich das Updateverfahren geändert.
 
 ## Versehentliche Updates verhindern
 
