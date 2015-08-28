@@ -1,39 +1,50 @@
 ---
 title: Solr manuell einrichten
 group: navigation
+weight: 100
 ---
 
-# Solr für OPUS 4 manuell einrichten
+# Solr für OPUS 4 einrichten
 
-Die folgende Anleitung beschreibt wie Solr 4.10.4 manuell für OPUS 4 eingerichtet werden kann. Als System wird
-Ubuntu 14.0.4 verwendet. Die Schritte sollten für andere Linux Distributionen ähnlich sein.
+Die folgende Anleitung beschreibt wie Apache Solr manuell für OPUS 4 eingerichtet werden kann. Als System wird
+Ubuntu 14.0.4 verwendet und die aktuelle Version von Solr ist 5.2.1. Die Schritte sollten für andere Linux
+Distributionen ähnlich sein.
 
 
-## Solr 4.9.1 herunterladen
+## Solr herunterladen
 
-{% highlight bash %}
-solr-4.10.4.tgz
-{% endhighlight %}
-
- Auspacken
+Zuerst muss die Solr Distribution von der [Solr](http://lucene.apache.org/solr/) Webseite heruntergeladen werden. Die
+heruntergeladene Datei, z.B. `solr-5.2.1.tgz` muss anschließend entpackt werden.
 
 {% highlight bash %}
-tar xvfz solr-4.10.4.tgz
+tar xvfz solr-5.2.1.tgz
 {% endhighlight %}
-
 
 ## Konfigurationsdateien holen
 
-Die Konfigurations Dateien liegen auf GitHub im Repository `opus4/search`. Sie können mit git clone heruntergeladen
+Die OPUS 4 Konfigurationsdateien für Solr liegen auf GitHub im Repository
+[opus4/search](https://github.com/opus4/search). Sie können mit git clone heruntergeladen
 werden.
 
 {% highlight bash %}
 git clone https://github.com/opus4/search
 {% endhighlight %}
 
-Die Konfigurationsdateien müssen im Augenblick unter Umständen für die Solr Version angepasst werden. Für Solr 4.9.1
-muss luceneVersionMatch hinzugefügt werden (Siehe unten). Bei Solr 4.10.4 hat sich noch mehr geändert. (TODO neue
-Konfigurationsdateien anlegen)
+Es gibt mehrere Konfigurationsdateien für verschiedene Versionen von Solr. Für Solr 5.x sollten die folgenden Dateien
+verwendet werden.
+
+* solrconfig-5.xml
+* schema-5.xml
+
+## Solr installieren
+
+Solr 5.x kommt mit einem Installationsskript das genutzt werden kann um Solr als ein Service auf dem System zu
+installieren.
+
+{% highlight bash %}
+
+{% endhighlight %}
+
 
 ## Verzeichnisse vorbereiten
 
