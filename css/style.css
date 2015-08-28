@@ -109,11 +109,12 @@ body {
     margin-left: -0.5em;
     margin-right: -0.5em;
     font-weight: normal;
-  border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
 }
 
 #content h3 {
-    font-weight: normal;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 #content h4 {
