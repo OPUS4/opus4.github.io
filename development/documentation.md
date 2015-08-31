@@ -20,10 +20,19 @@ Repository [opus4/opus4.github.io](https://github.com/opus4/opus4.github.io).
 
 ## Inhalte erstellen
 
+Um Inhalte für diese Dokumentation zu erstellen benötigt man entweder das Recht direkt Änderungen am Repository
+[opus4/opus4.github.io](https://github.com/opus4/opus4.github.io) durchzuführen oder man legt einen Clone an und reicht
+die Änderungen bzw. Ergänzungen als Pull Request ein.
+
 Für die Inhalte wird Markdown verwendet. Für jede Seite wird eine `.md` Datei angelegt, z.B. `documentation.md` für
 diese Seite. Informationen zum
 [GitHub Markdown](https://help.github.com/articles/github-flavored-markdown/) das verwendet werden kann finden sich
 auf den [Hilfeseiten](https://help.github.com/).
+
+Die eigentlichen Webseiten werden von Jekyll generiert. Um die Seiten in Ihrer fertigen Ausgabeform auf
+dem eigenen System betrachten zu können muss es entsprechend vorbereitet werden. Eine Anleitung um
+[Jekyll zu verwenden](https://help.github.com/articles/using-jekyll-with-pages/)
+findet sich in der Hilfe zu GitHub Pages.
 
 ## Seitenkopf
 
