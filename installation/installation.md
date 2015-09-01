@@ -1,8 +1,14 @@
 ---
 title: Mit Git
+weight: 10
 ---
 
 # Installation mit Git
+
+<p class="note">
+Die Anleitung bezieht sich auf die aktuelle Entwicklungsversion. Für den Release von 4.5 wird es noch kleine
+Änderungen geben, da dann die zu verwendende Version im Master *branch* liegt bzw. durch Tags markiert ist.
+</p>
 
 Die Installation mit Git wird empfohlen, da auf diese Weise Bug Fixes und andere Updates schneller und leichter in die
 Instanz übernommen werden können.
@@ -13,20 +19,31 @@ Um mit Git eine neue OPUS 4 Instanz einzurichten muss zuerst eine lokale Kopie a
 
 {% highlight bash %}
 $ git clone https://github.com/opus4/application opus4
+$ cd opus4
+{% endhighlight %}
+
+Das lokale Repository ist eine vollständige Kopie. Das heißt die bisherigen Änderungen und Branches sind ebenfalls
+lokal verfügbar.
+
+Die aktuelle Entwicklungsversion befindet sich momentan nicht im Branch *solrupdate* und nicht im *master*. Zu diesem
+Branch kann man mit folgendem Kommando wechseln.
+
+{% highlight bash %}
+$ git checkout solrupdate
 {% endhighlight %}
 
 ## Composer installieren
 
-Für die weitere Installation wird [Composer](https://getcomposer.org) benötigt. Falls Composer bereits installiert sein
-sollte kann dieser Schritt übersprungen werden. Andernfalls kann folgendes Skript verwendet werden.
+Für die weitere Installation wird [Composer](https://getcomposer.org) benötigt. Falls Composer bereits installiert ist,
+kann dieser Schritt übersprungen werden. Andernfalls kann folgendes Skript verwendet werden.
 
 **TODO** still changing
 
 {% highlight bash %}
-$ ./install-composer.sh
+$ bin/install-composer.sh .
 {% endhighlight %}
 
-Das Skript installiert `composer.phar` in das `opus4`-Verzeichnis.
+Dadurch wird `composer.phar` in das aktuelle Verzeichnis (`opus4`) installiert.
 
 ## Abhängigkeiten installieren
 
@@ -34,12 +51,18 @@ Die Abhängigkeiten werden mit Composer installiert. Dazu muss man in das Verzei
 aufrufen.
 
 {% highlight bash %}
-$ cd opus4
 $ composer install
+bzw.
+$ php composer.phar install
 {% endhighlight %}
 
 Nun werden automatisch die notwendigen Pakete heruntergeladen und im `vendor` Verzeichnis der Instanz installiert.
 
 ## Einrichten
 
-Zum Einrichten der Instanz kann jetzt das Setup Skript aufgerufen werden.
+Zum Einrichten der Instanz kann jetzt das Setup Skript aufgerufen werden. <span style="color: red">Das Skript ist noch
+noch an 4.5 angepasst. Daher muss OPUS 4 momentan manuell angerichtet werden.</span>
+
+[Manuelles Einrichten von OPUS 4]({{ site.baseurl }}/installation/setup.html)
+
+

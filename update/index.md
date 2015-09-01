@@ -3,7 +3,20 @@ title: Update
 weight: 70
 ---
 
-Mit dem Umstieg auf Git und Composer ändert sich das Updateverfahren.
+# Updates
+
+<p class="info">
+Die Anleitung zum Update auf 4.5 wird bis zum Release noch weiter überarbeitet.
+</p>
+
+Mit dem Umstieg auf Git und Composer hat sich das Updateverfahren geändert. Es gibt verschiedene Möglichkeiten wie eine
+mit Git installierte OPUS 4 Instanz aktualisiert werden kann.
+
+Für Instanzen, die nicht mit Git installiert wurden gibt es ein Tarball und ein Updateskript das verwendet werden kann.
+Es wird aber empfohlen auf Git umzusteigen, da so Buxfixes und andere Änderungen schneller übernommen werden können.
+
+* [Update mit Git]({{ site.baseurl }}/update/git.html)
+* [Update mit Tarball]({{ site.baseurl }}/update/tarball.html)
 
 ## Versehentliche Updates verhindern
 

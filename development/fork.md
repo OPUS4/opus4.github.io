@@ -1,5 +1,6 @@
 ---
 title: Fork
+weight: 20
 ---
 
 An dieser Stelle kann **Git** und seine Möglichkeiten nicht in allen Einzelheiten erklärt werden. Dafür gibt es im

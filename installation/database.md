@@ -1,8 +1,21 @@
 ---
 title: Datenbank
+weight: 40
 ---
 
-# Datenbank für OPUS 4 erstellen
+# MySQL Datenbank
+
+## Installation
+
+Unter Ubuntu kann MySQL mit folgendem Kommando installiert werden. Für OPUS wird mindestens die Version 5.1
+vorausgesetzt.
+
+{% highlight bash %}
+sudo apt-get install mysql-server
+{% endhighlight %}
+
+
+## Datenbank für OPUS 4 erstellen
 
 OPUS 4 verwendet MySQL (TODO Version). Um die Datenbank für OPUS 4 zu erstellen logged man sich als MySQL Root Nutzer
 ein.

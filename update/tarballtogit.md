@@ -18,7 +18,7 @@ ein Umstieg an echten Instanzen getestet werden konnte.
 Vermutlich wird es für existierende Instanzen am einfachsten sein noch einmal den Tarball zu verwenden, um auf die
 Version 4.5 zu wechseln und diese dann mit Git zu verknüpfen.
 
-# Vorbereitungen
+## Vorbereitungen
 
 Die lokale Instanz kann in ein Git Repository umgewandelt werden. Anschließend kann das GitHub Repository als Remote
 hinzugefügt werden.
