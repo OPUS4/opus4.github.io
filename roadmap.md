@@ -13,33 +13,33 @@ findet vorerst weiterhin in einem JIRA-System beim KOBV statt.
 
 ## OPUS 4.5
 
-Geplant für **September 2015**
-
-Der nächste Release wird OPUS 4.5. Ursprünglich war dieser Release als 4.4.6 geplant, aber es haben sich so viele
-Änderungen bei der Installation und für zukunftige Updates ergeben, daß es Sinn gemacht hat die Versionsnummer zu
-ändern.
+Momentan sind wir dabei das Update von Solr 1.4.1 auf Solr 5.3.1 zu testen und noch einige Bugs zu beheben.
 
   * [Was ist neu in OPUS 4.5?]({{ site.baseurl }}/opus45.html)
 
-Momentan sind wir dabei das Update von Solr 1.4.1 auf Solr 5.2.1 zu testen und arbeiten noch an den Installations-
-und Updateskripten. Bis zum Release wird auch noch die Online-Dokumentation weiter ausgebaut.
+Wenn OPUS 4.5 stabil läuft wird auf GitHub ein Tag angelegt werden und die weitere Entwicklung wird auf einem anderen
+Branch stattfinden. Mit den Anleitungen, die hier zu finden sind wird es dann möglich sein OPUS direkt mit Git manuell
+einzurichten. Das wird der offizielle Release sein.
 
-## OPUS 4.6
+Anschließend werden an den Installations- und Updateskripten weiterarbeiten, die es ermöglichen eine alte OPUS Instanz
+auf den Stand von 4.5 zu bringen. Außerdem wird die Online-Dokumentation weiter ausgebaut werden.
 
-Geplant für **Dezember 2015**
+Für alte Instanzen in der Version 4.4.5 wird es eine einfache Anleitung geben, um manuell auf eine mit Git installierte
+Version 4.5 von OPUS zu wechseln. Die Installation mit Git wird aufgrund der besseren Updatemöglichkeiten für die
+Zukunft empfohlen, um Zeit und Ressourcen bei der Entwicklung und beim Betrieb von OPUS 4 Repositorien zu sparen.
 
-Nachdem Umstieg auf Git, Composer und ein Aufräumen von OPUS in 4.5 können wir uns hoffentlich wieder voll auf neue
-Features für OPUS 4.6 konzentrieren. Geplant sind unter anderem folgende Punkte, die ursprünglich für 4.5 vorgesehen
-waren.
+## Weitere Entwicklung
 
-* Verbessertes Personenmanagement
-  * Suche nach Autoren ID
-  * Publikationslisten basierend auf Autoren ID
-  * Deduplizierung von vorhandenen Autoren
-* Vereinfachte Sortierung von Schriftenreihen
-* Bugfixes
+Nach dem Release von 4.5 wird die Entwicklung in verschiedenen Branches auf GitHub fortgesetzt werden. Diese Branches
+werden in erste Linie **MASTER**, **EARLY** und konkrete Versionsnummern wie **4.6** sein.
 
-Insbesondere die Deduplizierung der vorhanden Autoren bzw. Personen ist komplex. Sie ist notwendig, um in existierenden
-Instanzen zu ermitteln welche Autoren für die einzelnen Dokumente wirklich identisch sind. Im bisherigen Datenmodell
-von OPUS 4 wird nicht erfasst, ob der *Thomas Müller* für ein Dokument die selbe Person ist wie der *Thomas Müller* für
-ein anderes Dokument.
+Der **MASTER** Branch wird in der Regel auf dem Stand von festgelegten Versionsnummern bleiben bis die nächste Version
+freigegeben wird, beginnend mit Version 4.5. Kritische Bugfixes werden in diesen Branch bei Bedarf aufgenommen werden.
+
+Der **EARLY** Branch (Name kann sich noch ändern) wird alle neu entwickelten Funktionen enthalten, sofern sie keine
+Änderungen an der Datenbank oder am Index erfordern. Das heißt alles was fertig ist und durch ein einfaches Update mit
+Git übernommen werden kann.
+
+Die Branches mit konkreten Versionsnummern sind dazu da Änderungen zu sammeln, die ein komplexeres Update erfordern,
+z.B. das Ausführen von Skripten, um das Datenbankschema zu aktualisieren oder Änderungen am Solr Index vorzunehmen.
+Diese Änderungen werden in größeren Abständen mit großen Versionnummern, wie **4.6**, veröffentlicht werden.
