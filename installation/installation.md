@@ -43,12 +43,14 @@ kann dieser Schritt übersprungen werden. Andernfalls kann folgendes Skript verw
 $ bin/install-composer.sh .
 {% endhighlight %}
 
-Dadurch wird `composer.phar` in das aktuelle Verzeichnis (`opus4`) installiert.
+Dadurch wird `composer.phar` in das aktuelle Verzeichnis (`opus4`) installiert. Anschließend werden automatisch die
+notwendigen Abhängigkeiten heruntergeladen und im ```vendor``` Verzeichnis abgelegt.
 
 ## Abhängigkeiten installieren
 
 Die Abhängigkeiten werden mit Composer installiert. Dazu muss man in das Verzeichnis wechseln und `composer install`
-aufrufen.
+aufrufen. Dieser Schritt ist nur notwendig wenn Composer nicht mit Hilfe des Installationsskriptes im ```bin```
+Verzeichnis installiert wurde (siehe oben).
 
 {% highlight bash %}
 $ composer install
@@ -57,6 +59,16 @@ $ php composer.phar install
 {% endhighlight %}
 
 Nun werden automatisch die notwendigen Pakete heruntergeladen und im `vendor` Verzeichnis der Instanz installiert.
+
+### Datenbank Schema verlinken
+
+Momentan ist es noch notwendig das Datenbank Schema, das Teil des OPUS 4 Frameworks ist, manuell zu verlinken.
+Ausgehend vom Basisverzeichnis der OPUS 4 Instanz kann man das mit folgenden Kommandos machen.
+
+{% highlight bash %}
+$ cd db
+$ ln -sv ../vendor/opus4-repo/framework/db/schema schema
+{% endhighlight %}
 
 ## Einrichten
 
