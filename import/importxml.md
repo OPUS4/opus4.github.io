@@ -384,7 +384,7 @@ importiert.
 + Kardinalität: 1..n
 
 + Beschreibung des Inhalts: Voraussetzung ist, dass die Schriftenreihe(n) bereits 
-  in OPUS4 angelegt wurde(n).  Das Attribut number bezieht sich auf die Bandnummer.
+  in OPUS4 angelegt wurde(n).  Das Attribut *`number`* bezieht sich auf die Bandnummer.
 + Beispiel:
   {% highlight xml %}
 <series>
