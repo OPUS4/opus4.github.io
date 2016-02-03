@@ -20,7 +20,7 @@ $ sudo apt-get install apache2
 Ein Konfigurationdatei, z.B. `opus4.conf`, könnte wie folgt
 aussehen.
 
-{% highlight apache %}
+{% highlight bash %}
 AllowEncodedSlashes On
 
 Alias /opus4 "/var/local/opus4/public"
