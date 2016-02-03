@@ -35,10 +35,13 @@ werden in erste Linie **MASTER**, **EARLY** und konkrete Versionsnummern wie **4
 
 Der **MASTER** Branch wird in der Regel auf dem Stand von festgelegten Versionsnummern bleiben bis die nächste Version
 freigegeben wird, beginnend mit Version 4.5. Kritische Bugfixes werden in diesen Branch bei Bedarf aufgenommen werden.
+Dieser Branch ist für Produktivsysteme gedacht. Er wird aktualisiert, wenn genügend Änderungen für eine neue Version
+zusammengekommen sind.
 
 Der **EARLY** Branch (Name kann sich noch ändern) wird alle neu entwickelten Funktionen enthalten, sofern sie keine
 Änderungen an der Datenbank oder am Index erfordern. Das heißt alles was fertig ist und durch ein einfaches Update mit
-Git übernommen werden kann.
+Git übernommen werden kann. Eine Instanz kann auf diesem Branch betrieben werden, wenn immer die neuesten Funktionen
+genutzt werden sollen.
 
 Die Branches mit konkreten Versionsnummern sind dazu da Änderungen zu sammeln, die ein komplexeres Update erfordern,
 z.B. das Ausführen von Skripten, um das Datenbankschema zu aktualisieren oder Änderungen am Solr Index vorzunehmen.
