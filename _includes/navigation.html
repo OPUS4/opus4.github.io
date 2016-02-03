@@ -15,15 +15,13 @@
   {% assign nodeUrlParts = node.url | split: '/' %}
   {% assign nodeLevel = nodeUrlParts | size %}
   {% assign filename = nodeUrlParts | last %}
-  {% if node.url contains currentBaseUrl and currentLevel >= nodeLevel %}
-    {% unless filename contains '.html' %}
+  {% unless filename contains '.html' %}
+    {% if node.url == currentBaseUrl and currentLevel >= nodeLevel %}
       <li class="level1 active"><a href='{{site.baseurl}}{{node.url}}'>{{node.title}}</a></li>
       {% include navlevel2.html %}
-    {% endunless %}
-  {% else %}
-    {% unless filename contains '.html' %}
+    {% else %}
       <li class="level1"><a href="{{site.baseurl}}{{node.url}}">{{node.title}}</a></li>
-    {% endunless %}
-  {% endif %}
+    {% endif %}
+  {% endunless %}
 {% endfor %}
 
