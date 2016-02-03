@@ -3,25 +3,27 @@
 {% assign currentUrlParts = page.url | split: '/' %}
 {% assign currentLevel = currentUrlParts | size %}
 {% assign pageName = currentUrlParts | last %}
-{% assign currentBaseUrl = page.url | replace: pageName %}
+
+{% if pageName contains '.html' %}
+  {% assign currentBaseUrl = page.url | remove: pageName %}
+{% else %}
+  {% assign currentBaseUrl = page.url %}
+  {% assign pageName = '' %}
+{% endif %}
 
 {% for node in pages %}
   {% assign nodeUrlParts = node.url | split: '/' %}
   {% assign nodeLevel = nodeUrlParts | size %}
   {% assign filename = nodeUrlParts | last %}
-  {% if node.url contains currentBaseUrl %}
-    {% if filename == 'index.html' %}
-      {% if currentLevel == nodeLevel %}
-        <li class="level1 active"><a href='{{site.baseurl}}{{node.url}}'>{{node.title}}</a></li>
-        {% include navlevel2.html %}
-      {% else %}
-        <li class="level1"><a href='{{site.baseurl}}{{node.url}}'>{{node.title}}</a></li>
-      {% endif %}
-    {% endif %}
+  {% if node.url contains currentBaseUrl and currentLevel >= nodeLevel %}
+    {% unless filename contains '.html' %}
+      <li class="level1 active"><a href='{{site.baseurl}}{{node.url}}'>{{node.title}}</a></li>
+      {% include navlevel2.html %}
+    {% endunless %}
   {% else %}
-    {% if filename == 'index.html' %}
+    {% unless filename contains '.html' %}
       <li class="level1"><a href="{{site.baseurl}}{{node.url}}">{{node.title}}</a></li>
-    {% endif %}
+    {% endunless %}
   {% endif %}
 {% endfor %}
 
