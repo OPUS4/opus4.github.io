@@ -5,29 +5,38 @@ weight: 20
 
 # OPUS Import-XML
 
-Um Metadaten in OPUS4 zu importieren, ist es notwendig, diese auf OPUS-Import-XML zu mappen.  Dieses Format wird im Folgenden dokumentiert.
+Um Metadaten in OPUS4 zu importieren, ist es notwendig, diese auf OPUS-Import-XML zu mappen.  Dieses Format wird im
+Folgenden dokumentiert.
 
 
 
 ## Hinweise zu Datenstruktur und -syntax
 
-Im OPUS4-Import-Format entspricht **`opusDocument`** einem Metadatensatz und wird durch Elemente, Unterelemente und Attribute strukturiert.
-Das Format wird in der Schemadatei **$BASEDIR/opus4/scripts/import/opus_import.xsd** definiert. Die Reihenfolge der Elemente innerhalb 
-von **`opusDocument`** ist bindend.  Attribute spezifizieren die Eigenschaften von Dokumenten und sind immer einem bestimmten Element
-zugeordnet.  Die Reihenfolge der Attribute innerhalb eines Elements ist nicht bindend.  Eckige Klammern dienen lediglich der Verständlichkeit
-und sind nicht Teil des Formats.
+Im OPUS4-Import-Format entspricht **`opusDocument`** einem Metadatensatz und wird durch Elemente, Unterelemente und
+Attribute strukturiert.
+Das Format wird im OPUS 4 Framework in der Datei
+[opus_import.xsd](https://github.com/OPUS4/framework/blob/master/library/Opus/Util/opus_import.xsd) definiert. Bei
+einer mit Git und Composer installierten OPUS 4 Instanz ist die Datei unter folgendem Pfad zu finden:
+
+    $BASEDIR/vendor/opus4-repo/framework/library/Opus/Util/opus_import.xsd
+
+Die Reihenfolge der Elemente innerhalb
+von **`opusDocument`** ist bindend.  Attribute spezifizieren die Eigenschaften von Dokumenten und sind immer einem
+bestimmten Element
+zugeordnet.  Die Reihenfolge der Attribute innerhalb eines Elements ist nicht bindend.  Eckige Klammern dienen
+lediglich der Verständlichkeit und sind nicht Teil des Formats.
 
 
 ### Kardinalität
 
-Es wird bei den Elementen und Unterelementen zwischen obligatorisch und optional unterschieden.  Darüber hinaus sind einige (Unter)Elemente
-(unbegrenzt) wiederholbar.
+Es wird bei den Elementen und Unterelementen zwischen obligatorisch und optional unterschieden.  Darüber hinaus sind
+einige (Unter)Elemente (unbegrenzt) wiederholbar.
 
 <p class="info" markdown="1">
-  Obligatorisch, nicht wiederholbar ...............: 1  
-  Obligatorisch, wiederholbar .......................: 1..n  
-  Optional, nicht wiederholbar ......................: 0..1  
-  Optional, wiederholbar ..............................: 0..n  
+  Obligatorisch, nicht wiederholbar ...............: 1
+  Obligatorisch, wiederholbar .......................: 1..n
+  Optional, nicht wiederholbar ......................: 0..1
+  Optional, wiederholbar ..............................: 0..n
 </p>
 
 
@@ -100,7 +109,7 @@ Es wird bei den Elementen und Unterelementen zwischen obligatorisch und optional
 + Bezeichnung: **`titles`**
 + Kardinalität: 0..1
 
-+ Beschreibung des Inhalts: In diesem Element können Untertitel, übergeordnete Titel 
++ Beschreibung des Inhalts: In diesem Element können Untertitel, übergeordnete Titel
   und übersetzte Titel des Dokuments angegeben werden.
 
 
@@ -156,7 +165,7 @@ Es wird bei den Elementen und Unterelementen zwischen obligatorisch und optional
 + Bezeichnung: **`persons`**
 + Kardinalität: 0..1
 
-+ Beschreibung des Inhalts: Es ist möglich, mehrere Personen anzugeben. 
++ Beschreibung des Inhalts: Es ist möglich, mehrere Personen anzugeben.
   Die Rollen sind wiederholbar (z.B. "author").
 
 
@@ -237,7 +246,7 @@ Es wird bei den Elementen und Unterelementen zwischen obligatorisch und optional
 + Attribut: obligatorisch: *`role`* (publisher, grantor)
 + Kardinalität: 1..n
 
-+ Beschreibung des Inhalts: Voraussetzung ist, dass die verbreitende(n) Stelle(n) 
++ Beschreibung des Inhalts: Voraussetzung ist, dass die verbreitende(n) Stelle(n)
   bereits in OPUS4 angelegt wurden (siehe oben).
 + Beispiel:
   {% highlight xml %}
@@ -250,10 +259,10 @@ Es wird bei den Elementen und Unterelementen zwischen obligatorisch und optional
 <p class="warning" markdown="1">
 Es muss darauf geachtet werden, dass in diesem Element nur IDs mit Rollen eingetragen
 werden, über die die entsprechende verbreitende Stelle in OPUS4 verfügt.  Wenn z.B.
-eine DNB-Institution referenziert wird, für die nur `is_grantor` (und nicht `is_publisher` ) 
-gesetzt ist, und im Import-XML im Attribut *`role`* der Wert "publisher" eingetragen wird, 
+eine DNB-Institution referenziert wird, für die nur `is_grantor` (und nicht `is_publisher` )
+gesetzt ist, und im Import-XML im Attribut *`role`* der Wert "publisher" eingetragen wird,
 dann wirft der Import eine Fehlermeldung aus und der betreffende Datensatz wird nicht
-importiert. 
+importiert.
 </p>
 
 
@@ -276,7 +285,7 @@ importiert.
 + Kardinalität: 1..n
 
 + Beschreibung des Inhalts: Es kann maximal ein Datum pro Typ eingetragen werden.
-  Sollte das Element **`date`** dennoch mehrfach mit dem gleichen Typ eingetragen 
+  Sollte das Element **`date`** dennoch mehrfach mit dem gleichen Typ eingetragen
   werden, dann wird nur das erste importiert und die anderen werden ignoriert.
 + Beispiel:
   {% highlight xml %}
@@ -301,7 +310,7 @@ importiert.
 ##### **1.8.1 Identifikator**
 
 + Bezeichnung: **`identifier`**
-+ Attribut: obligatorisch: *`type`* (doi, handle, urn, std-doi, url, cris-link, 
++ Attribut: obligatorisch: *`type`* (doi, handle, urn, std-doi, url, cris-link,
   splash-url, isbn, issn, opus3-id, opac-id, uuid, serial, pmid, arxiv)
 + Kardinalität: 1..n
 
@@ -333,7 +342,7 @@ importiert.
 + Kardinalität: 1..n
 
 + Beschreibung des Inhalts: Es können mehrere Bemerkungen bzw.
-  Notizen angegeben werden und zwar mit der Sichtbarkeit 
+  Notizen angegeben werden und zwar mit der Sichtbarkeit
   intern ("private") oder öffentlich ("public").
 + Beispiel:
   {% highlight xml %}
@@ -383,7 +392,7 @@ importiert.
 + Attribut: obligatorisch: *`number`* (beliebiger Inhalt)
 + Kardinalität: 1..n
 
-+ Beschreibung des Inhalts: Voraussetzung ist, dass die Schriftenreihe(n) bereits 
++ Beschreibung des Inhalts: Voraussetzung ist, dass die Schriftenreihe(n) bereits
   in OPUS4 angelegt wurde(n).  Das Attribut *`number`* bezieht sich auf die Bandnummer.
 + Beispiel:
   {% highlight xml %}
@@ -408,8 +417,8 @@ importiert.
 + Attribut: obligatorisch: *`key`* (die Bezeichnung)
 + Kardinalität: 1..n
 
-+ Beschreibung des Inhalts: Voraussetzung ist, dass die benutzerdefinierten Felder 
-  bereits in OPUS4 angelegt wurden.  An dieser Stelle wird daher der *`key`* und 
++ Beschreibung des Inhalts: Voraussetzung ist, dass die benutzerdefinierten Felder
+  bereits in OPUS4 angelegt wurden.  An dieser Stelle wird daher der *`key`* und
   der Inhalt bzw. Wert des benutzerdefinierten Feldes eingetragen.
 + Beispiel:
   {% highlight xml %}
@@ -434,8 +443,8 @@ importiert.
 + Attribut: obligatorisch: *`id`* (nur Zahlen)
 + Kardinalität: 1..n
 
-+ Beschreibung des Inhalts: Voraussetzung ist, dass die Lizenz bereits in OPUS4 
-  angelegt wurde.  An dieser Stelle wird daher nur die ID der gewünschten Lizenz 
++ Beschreibung des Inhalts: Voraussetzung ist, dass die Lizenz bereits in OPUS4
+  angelegt wurde.  An dieser Stelle wird daher nur die ID der gewünschten Lizenz
   eingetragen.
 + Beispiel:
   {% highlight xml %}
