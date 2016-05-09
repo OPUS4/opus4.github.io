@@ -32,12 +32,10 @@ lediglich der Verständlichkeit und sind nicht Teil des Formats.
 Es wird bei den Elementen und Unterelementen zwischen obligatorisch und optional unterschieden.  Darüber hinaus sind
 einige (Unter)Elemente (unbegrenzt) wiederholbar.
 
-<p class="info" markdown="1">
-  Obligatorisch, nicht wiederholbar ...............: 1
-  Obligatorisch, wiederholbar .......................: 1..n
-  Optional, nicht wiederholbar ......................: 0..1
-  Optional, wiederholbar ..............................: 0..n
-</p>
+    Obligatorisch, nicht wiederholbar .....: 1
+    Obligatorisch, wiederholbar ...........: 1..n
+    Optional, nicht wiederholbar ..........: 0..1
+    Optional, wiederholbar ................: 0..n
 
 
 ## Referenzbeschreibung von OPUS-Import-XML
