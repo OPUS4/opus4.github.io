@@ -24,6 +24,12 @@ stellen wollen.
 Das [OPUS 4 Handbuch](userdoc) ist für Betreiber und Nutzer von OPUS 4 gedacht. Dort finden sich Anleitungen für die
 Installation, Konfiguration und den Betrieb eines OPUS 4 Repositories.
 
+## Entwickler
+
+Die [Dokumentation für Entwickler](devdoc) erläutert Details der OPUS 4 Implementation und ist nützlich, wenn man 
+OPUS 4 anpassen bzw. weiterentwickeln möchte.
+
+
 ## Weitere Informationen
 
 Die offizielle [OPUS 4 Homepage](http://opus4.kobv.de) bietet weitere Informationen zum Projekt und den bisher
