@@ -89,7 +89,6 @@ body {
 #content {
     display: table-cell;
     padding: 1em 2em;
-    width: 100%;
     vertical-align: top;
     font-size: 1.1em;
     line-height: 180%;
@@ -97,6 +96,7 @@ body {
 
 #content-wrapper {
     max-width: 40em;
+    margin: 0 auto;
 }
 
 #content h1 {
@@ -216,4 +216,8 @@ p.warning {
         display: none;
     }
 
+}
+
+img#title-logo {
+    text-align: center;
 }

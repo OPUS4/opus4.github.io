@@ -2,11 +2,11 @@
 title: Home
 group: navigation
 weight: 0
+layout: start
 ---
 
-<p class="note">
-Auf den Webseiten hier finden Sie Informationen zu Installation, Administration und Entwicklung von OPUS 4. Die
-Seiten befinden sich nach der Migration der OPUS 4 Entwicklung zu GitHub noch im Aufbau.
+<p style="text-align: center">
+<img src="img/opus-logo-large.png" id="title-logo" />
 </p>
 
 ## Was ist OPUS 4?
