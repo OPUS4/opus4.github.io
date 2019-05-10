@@ -47,6 +47,17 @@ body {
     /* border-radius: 0.5em; */
 }
 
+#searchbox {
+    margin-bottom: 0.5em;
+    padding-left: 80%;
+}
+
+#searchbox iframe {
+    height: 40px;
+    overflow: hidden;
+    display: block;
+}
+
 #navigation .title {
     text-align: center;
     font-size: 1.2em;
